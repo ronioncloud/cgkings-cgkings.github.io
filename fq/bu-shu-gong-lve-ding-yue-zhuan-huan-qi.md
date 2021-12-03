@@ -85,7 +85,7 @@ cd /home/sub-web && yarn build
 本教程使用caddy发布，故需要给予权限，尽量不要放在/root下
 
 ```
-mkdir -p /var/www/html && cp -r /home/sub-web/dist/* /var/www/html && chmod -r 755 /var/www/html && chown caddy /var/www/html && chgrp caddy /var/www/html
+mkdir –vp /var/www/html && cp -r /home/sub-web/dist/* /var/www/html && chmod -r 755 /var/www/html && chown caddy /var/www/html && chgrp caddy /var/www/html
 ```
 
 ## 三、SubConverter后台搭建
