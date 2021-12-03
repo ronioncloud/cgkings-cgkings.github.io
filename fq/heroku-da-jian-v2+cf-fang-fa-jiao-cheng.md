@@ -4,9 +4,9 @@ Heroku 是一个支持多种编程语言的云平台即服务，并且提供免�
 
 注意：Heroku 有滥用危险，后果可能就是封禁账号哦！
 
-### 一、部署Heroku应用 <a href="yi-pei-zhi-heroku" id="yi-pei-zhi-heroku"></a>
+### 一、部署Heroku应用 <a href="#yi-pei-zhi-heroku" id="yi-pei-zhi-heroku"></a>
 
-1、首先注册Heroku账号，点击通过** **[**https://dashboard.heroku.com**](https://dashboard.heroku.com) 注册一个账号，注册时候不能使用QQ邮箱
+1、首先注册Heroku账号，点击通过 **** [**https://dashboard.heroku.com**](https://dashboard.heroku.com) 注册一个账号，注册时候不能使用QQ邮箱
 
 2、注册成功以后登录，点击[**自动部署链接**](https://dashboard.heroku.com/new?template=https://github.com/iamtrazy/xray-heroku)，名称随便填写就行了，记住uuid备用，然后点击 Deploy app 系统会自动部署
 
@@ -16,7 +16,7 @@ Heroku 是一个支持多种编程语言的云平台即服务，并且提供免�
 
 4、接着下滑，看见Domains项后有个域名！https://\*\*\*\*\*.herokuapp.com/ 记下域名，稍后配置CloudFlare 反向代理会用到：[![](https://img2020.cnblogs.com/blog/1783030/202008/1783030-20200817225353814-2098411255.png)](https://img2020.cnblogs.com/blog/1783030/202008/1783030-20200817225353814-2098411255.png)
 
-### 二、配置CloudFlare反向代理 <a href="er-pei-zhi-cloudflare-fan-xiang-dai-li" id="er-pei-zhi-cloudflare-fan-xiang-dai-li"></a>
+### 二、配置CloudFlare反向代理 <a href="#er-pei-zhi-cloudflare-fan-xiang-dai-li" id="er-pei-zhi-cloudflare-fan-xiang-dai-li"></a>
 
 1、首先登陆CloudFlare官网，然后点击 右侧的 Workers，点击创建 Workers ![](<../.gitbook/assets/image (10).png>)&#x20;
 
@@ -37,13 +37,13 @@ addEventListener(
 
 [![](https://img2020.cnblogs.com/blog/1783030/202008/1783030-20200817225442552-681864788.png)](https://img2020.cnblogs.com/blog/1783030/202008/1783030-20200817225442552-681864788.png)至此！CF就配置完成了，接下来开始配置V2客户端！
 
-### 三、自选IP <a href="san-pei-zhi-v2-ke-hu-duan" id="san-pei-zhi-v2-ke-hu-duan"></a>
+### 三、自选IP <a href="#san-pei-zhi-v2-ke-hu-duan" id="san-pei-zhi-v2-ke-hu-duan"></a>
 
 下载自选IP程序，然后windows系统运行即可，全自动化。
 
 [https://huangenet.lanzoui.com/iJ98Hfnppd](https://huangenet.lanzoui.com/iJ98Hfnppdg)
 
-### 四、配置V2客户端 <a href="si-zi-xuan-ip" id="si-zi-xuan-ip"></a>
+### 四、配置V2客户端 <a href="#si-zi-xuan-ip" id="si-zi-xuan-ip"></a>
 
 配置客户端，请按照图片的要求设置，否则不能联网
 

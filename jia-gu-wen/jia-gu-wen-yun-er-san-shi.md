@@ -1,12 +1,12 @@
 # 甲骨文云二三事
 
-## 简介 <a href="_0" id="_0"></a>
+## 简介 <a href="#_0" id="_0"></a>
 
 Oracle Cloud即大名鼎鼎的甲骨文旗下新设立的云服务平台。目前新注册账号可以在自己所选择的初始区域（注册时选择的区域）建立两台永久免费主机，此外还有300美金的试用额度可以在未来一个月内持续使用。本文主要是提供以下如何通过DD网络远程安装的方式来更新Oracle Cloud的系统。
 
 注意：始终免费服务仅限于注册时所选区域标注始终免费的项目，余下的没标注的会扣300美金的试用额度。但只要没有选择升级到付费账号，就不会对信用卡扣款。
 
-## 一、账号注册的那些事 <a href="_3" id="_3"></a>
+## 一、账号注册的那些事 <a href="#_3" id="_3"></a>
 
 ### 1、注册教程
 
@@ -203,77 +203,5 @@ ok，添加完成！
 
 ![](<../.gitbook/assets/image (69).png>)
 
-## 三、甲骨文云のDD脚本那些事
-
-{% hint style="info" %}
-DD有风险，操作需谨慎，后果是有可能VPS失恋，有可能会被删机器，有可能会被删号，不过后2种后果还没听说实际谁遇到过。
-
-注意：要DD,先确认创建实例的镜像是Ubuntu 16或18，其它镜像能不能DD成功没试过！
-{% endhint %}
-
-为什么要DD？甲骨文的OS不是纯净系统，`rpcbind`监听，`oracle-cloud-agent`后台监控，系统firewall防护墙限制，系统端口限制，Ubuntu镜像默认设置了Iptable规则，以上种种全部要操作，直接DD最省心！
-
-### step1：安装所需软件
-
-{% tabs %}
-{% tab title="debian/ubuntu" %}
-```
-sudo -i && apt-get install -y xz-utils openssl gawk file wget curl && apt-get update
-```
-{% endtab %}
-
-{% tab title="centos" %}
-```
-yum install -y xz openssl gawk file wget curl && yum update
-```
-{% endtab %}
-{% endtabs %}
-
-### step2：运行萌咖的DD一键脚本
-
-{% tabs %}
-{% tab title="debian 9" %}
-运行如下命令执行脚本：
-
-```
-bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh') -d 9 -v 64 -a -firmware
-```
-
-{% hint style="info" %}
-注意：全自动安装，断连后稍等一段时间，使用如下默认用户密码登录ssh
-
-默认root密码:**`MoeClub.org`**，可安装完成后`passwd`命令自行修改
-
-也可以在上述脚本命令中增加参数**`-p "自定义root密码" -port "自定义ssh端口"`**
-{% endhint %}
-{% endtab %}
-
-{% tab title="debian 10" %}
-运行如下命令执行脚本：&#x20;
-
-```
-bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh') -d 10 -v 64 -a -firmware
-```
-
-{% hint style="info" %}
-注意：全自动安装，断连后稍等一段时间，使用如下默认用户密码登录ssh
-
-默认root密码:MoeClub.org，可安装完成后passwd命令自行修改
-
-也可以脚本命令中增加参数**`-p "自定义root密码" -port "自定义ssh端口"`**
-{% endhint %}
-{% endtab %}
-
-{% tab title="ubuntu" %}
-留空
-{% endtab %}
-
-{% tab title="windows" %}
-留空
-{% endtab %}
-{% endtabs %}
-
-![](<../.gitbook/assets/image (83).png>)
-
-自动断开后，等会就可以使用新密码登录了！
+##
 
