@@ -47,7 +47,7 @@ yarn --version
 运行如下代码：
 
 ```
-cd /root && git clone https://github.com/CareyWang/sub-web.git && cd sub-web && yarn install
+cd /home && git clone https://github.com/CareyWang/sub-web.git && cd /home/sub-web && yarn install
 ```
 
 如果yarn install出错，可以尝试运行`yarn config set ignore-engines true`
@@ -77,7 +77,7 @@ yarn serve
 CTRL+C ，退出当前调试，然后执行下面的命令进行打包：
 
 ```
-cd sub-web && yarn build
+cd /home/sub-web && yarn build
 ```
 
 执行以下打包命令，在 `/root/sub-web` 下面会生成一个 `dist` 目录，这个目录即为网页的发布目录。
