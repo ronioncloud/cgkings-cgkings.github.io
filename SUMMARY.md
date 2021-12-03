@@ -4,7 +4,7 @@
 * [debian设置root登录ssh权限](debian-she-zhi-root-deng-lu-ssh-quan-xian.md)
 * [菜鸟教程](https://www.runoob.com)
 
-## EMBY & jellyfin <a href="emby" id="emby"></a>
+## EMBY & jellyfin <a href="#emby" id="emby"></a>
 
 * [emby手册](https://embywiki.911997.xyz)
 * [cloudflare自选IP+caddy2反代](emby/untitled.md)
@@ -47,6 +47,7 @@
 * [Heroku 搭建 V2+CF 方法教程](fq/heroku-da-jian-v2+cf-fang-fa-jiao-cheng.md)
 * [FQ搭建工具介绍](fq/fq-da-jian-gong-ju-jie-shao.md)
 * [申请泛域名证书](fq/shen-qing-fan-yu-ming-zheng-shu.md)
+* [订阅转换器 部署攻略](fq/ding-yue-zhuan-huan-qi-bu-shu-gong-lve.md)
 
 ## xp
 
