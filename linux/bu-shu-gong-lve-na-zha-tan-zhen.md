@@ -1,4 +1,4 @@
-# 搭建哪吒探针
+# 部署攻略=》哪吒探针
 
 哪吒探针原作者GitHub：[https://github.com/naiba/nezha](https://github.com/naiba/nezha)
 
@@ -22,7 +22,7 @@ VPS 需要放行`8008`、`5555`两个端口，这是默认的，如果你程序�
 
 #### 3.1 创建一个OAuth Apps
 
-先打开：[https://github.com/settings/developers](https://haoduck.com/go.html?url=https://github.com/settings/developers)，然后点击New OAuth App按钮
+先打开：[https://github.com/settings/developers](https://github.com/settings/developers)，然后点击New OAuth App按钮
 
 ![](<../.gitbook/assets/image (39).png>)
 
