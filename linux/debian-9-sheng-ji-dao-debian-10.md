@@ -50,7 +50,96 @@ lsb_release -a
 {% endtab %}
 
 {% tab title="Debian 10 升 11" %}
+**升级当前系统中的软件包**\
 
+
+```
+apt update && apt upgrade && apt full-upgrade
+```
+
+\
+**更新 /etc/apt/sources.list 文件**\
+
+
+```
+cp /etc/apt/sources.list /etc/apt/sources.list.buster && \
+cat << "EOF" > /etc/apt/sources.list
+deb http://deb.debian.org/debian bullseye main contrib non-free
+deb http://deb.debian.org/debian bullseye-updates main contrib non-free
+deb http://security.debian.org/debian-security bullseye-security main
+deb http://ftp.debian.org/debian bullseye-backports main contrib non-free
+EOF
+```
+
+
+
+```
+cp /etc/apt/sources.list /etc/apt/sources.list.buster && \
+cat << "EOF" > /etc/apt/sources.list
+deb http://mirrors.aliyun.com/debian-security bullseye-security main
+deb http://mirrors.aliyun.com/debian bullseye main contrib non-free
+deb http://mirrors.aliyun.com/debian bullseye-updates main contrib non-free
+deb http://mirrors.aliyun.com/debian bullseye-backports main contrib non-free
+EOF
+```
+
+\
+**更新一次系统仓库列表，开始升级**\
+\
+**升级过程需要有人值守：因为部分软件的配置文件会出现变化，需要手动确认使用哪个版本。**\
+\
+**切记这个过程中不要中断，否则可能导致包关系异常或包管理系统损坏。**
+
+```
+apt update && apt upgrade && apt dist-upgrade && apt full-upgrade
+```
+
+**使用新的内核 image重启系统**
+
+```
+systemctl reboot
+```
+
+**查看系统版本**
+
+```
+cat /etc/os-release
+```
+
+
+
+> PRETTY\_NAME="Debian GNU/Linux 11 (bullseye)"\
+> NAME="Debian GNU/Linux"\
+> VERSION\_ID="11"\
+> VERSION="11 (bullseye)"\
+> VERSION\_CODENAME=bullseye\
+> ID=debian\
+> HOME\_URL="https://www.debian.org/"\
+> SUPPORT\_URL="https://www.debian.org/support"\
+> BUG\_REPORT\_URL="https://bugs.debian.org/"
+
+**清理软件包**
+
+```
+apt autoremove && apt autoclean
+```
+
+```
+dpkg --list | grep "^rc" | cut -d " " -f 3 | xargs dpkg --purge
+```
+
+**删除过时镜像**
+
+```
+dpkg --get-selections | grep linux
+```
+
+> linux-image-4.19.0-17-amd64                     install\
+> linux-image-5.10.0-8-amd64                      install
+
+```
+apt autoremove --purge linux-image-4.19.0-17-amd64
+```
 {% endtab %}
 {% endtabs %}
 
