@@ -47,7 +47,7 @@ yarn --version
 运行如下代码：
 
 ```
-cd /home && git clone https://github.com/CareyWang/sub-web.git && cd /home/sub-web && yarn install
+cd /home && git clone https://github.com/cgkings/sub-web-modify.git && chmod -R 755 sub-web-modify && cd sub-web-modify && yarn install
 ```
 
 如果yarn install出错，可以尝试运行`yarn config set ignore-engines true`
