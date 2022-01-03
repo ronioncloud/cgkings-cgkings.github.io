@@ -58,7 +58,7 @@ yarn serve
 
 通过`yarn serve`命令，可以浏览器访问 http://服务器ip:8080/ 进行前端 sub-web 预览调试
 
-一般是通过修改`/root/sub-web/src/views/Subconverter.vue`文件来实现调试
+一般是通过修改`/home/sub-web-modify/src/views/Subconverter.vue`文件来实现调试
 
 我自己的`Subconverter.vue`文件有备份，就不说具体修改内容了，想改的，参考几个大佬的转换的地址源代码改吧，抄袭是代码学习的捷径
 
@@ -77,15 +77,15 @@ yarn serve
 CTRL+C ，退出当前调试，然后执行下面的命令进行打包：
 
 ```
-cd /home/sub-web && yarn build
+cd /home/sub-web-modify && yarn build
 ```
 
-执行以下打包命令，在 `/root/sub-web` 下面会生成一个 `dist` 目录，这个目录即为网页的发布目录。
+执行以下打包命令，在 `/home/sub-web-modify` 下面会生成一个 `dist` 目录，这个目录即为网页的发布目录。
 
 本教程使用caddy发布，故需要给予权限，尽量不要放在/root下
 
 ```
-mkdir -p /var/www/html && cp -r /home/sub-web/dist/* /var/www/html && chmod -R 755 /var/www/html/ && chown -R caddy.caddy /var/www/html
+mkdir -p /var/www/html && cp -r /home/sub-web-modify/dist/* /var/www/html && chmod -R 755 /var/www/html/ && chown -R caddy.caddy /var/www/html
 ```
 
 ## 三、SubConverter后台搭建
