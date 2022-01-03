@@ -25,6 +25,8 @@
 * [部署攻略=》订阅转换器](fq/bu-shu-gong-lve-ding-yue-zhuan-huan-qi.md)
 * [cloudflare自选IP+caddy2反代](fq/untitled.md)
 * [CloudFlare自选IP 并自动修改DNSPOD](fq/cloudflare-zi-xuan-ip-bing-pei-zhi-dns-she-zhi-15-fen-zhong-zi-dong-geng-huan-xin-ip-jia-kuai-wang-z.md)
+* [MyUrls 短链服务部署](fq/myurls-duan-lian-fu-wu-bu-shu.md)
+* [Caddy2 简明教程](fq/caddy2-jian-ming-jiao-cheng.md)
 
 ## 甲骨文
 
