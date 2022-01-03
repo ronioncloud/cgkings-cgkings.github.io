@@ -151,12 +151,12 @@ https://suc.cgking.com/version
 编辑`/etc/caddy/Caddyfile`，然后`systemctl restart caddy`
 
 ```
-sub.x-clash.gq {
+sub.cgking.gq {
 	root * /var/www/html
 	file_server
 }
 
-suc.x-clash.gq {
+suc.cgking.gq {
 	file_server
 	reverse_proxy localhost:25500
 }
