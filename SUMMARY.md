@@ -16,6 +16,7 @@
 * [vnstat 统计服务器网卡流量](linux/vnstat-tong-ji-fu-wu-qi-wang-ka-liu-liang.md)
 * [解决端口占用问题](linux/jie-jue-duan-kou-zhan-yong-wen-ti.md)
 * [部署攻略=》哪吒探针](linux/bu-shu-gong-lve-na-zha-tan-zhen.md)
+* [部署攻略=>files.gallery文件管理](linux/bu-shu-gong-lve-files.gallery-wen-jian-guan-li.md)
 
 ## FQ
 
