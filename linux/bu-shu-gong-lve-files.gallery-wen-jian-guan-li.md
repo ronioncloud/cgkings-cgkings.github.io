@@ -67,7 +67,13 @@ king.gq {
 sudo systemctl restart php7.4-fpm.service && sudo systemctl restart caddy
 ```
 
-访问[https://king.gq/index.p](https://x-king.gq/index.php)[https://x-king.gq/index.php](https://x-king.gq/index.php)
+访问[https://king.gq/index.php](https://x-king.gq/index.php),搭建成功！
+
+
+
+访问[https://king.gq/index.php?check=1](https://king.gq/index.php?check=1)，可以测试您的 PHP 和服务器的各种功能
+
+![](<../.gitbook/assets/image (75).png>)
 
 
 
