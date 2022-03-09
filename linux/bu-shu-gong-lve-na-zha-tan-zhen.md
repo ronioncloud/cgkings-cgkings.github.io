@@ -455,6 +455,24 @@ avatar.style.visibility="visible"
 
 方法很多，本部分留空
 
+
+
+## 六、一键关闭ssh功能
+
+* \--report-delay 系统信息上报的间隔，默认为 1 秒，可以设置为 3 来进一步降低 agent 端系统资源占用（配置区间 1-4）
+* \--skip-conn 不监控连接数，机场/连接密集型机器推荐设置，不然比较占 CPU(shirou/gopsutil/issues#220)
+* \--skip-procs 不监控进程数，也可以降低 agent 占用
+* \--disable-auto-update 禁止 Agent 自动更新（安全特性）
+* \--disable-command-execute 禁止在 Agent 机器上执行定时任务、打开在线终端（安全特性）
+
+编辑/etc/systemd/system/nezha-agent.service，以下命令仅仅是添加了
+
+```
+sed -i '/ExecStart/ s/$/ --skip-conn --disable-command-execute/' /etc/systemd/system/nezha-agent.service && systemctl daemon-reload && bash <(curl -Lso- https://raw.githubusercontent.com/naiba/nezha/master/script/install.sh) restart_agent
+```
+
+
+
 ## 常见问题
 
 #### 1. 国内服务器出现curl: (7) Failed to connect to raw.githubusercontent.com
