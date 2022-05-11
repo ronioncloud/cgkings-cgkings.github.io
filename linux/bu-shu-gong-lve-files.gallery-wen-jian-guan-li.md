@@ -39,11 +39,11 @@ sudo systemctl enable caddy
 step3:首次执行Index.php,生成`_files`文件夹，用于存储缓存、配置和可选的包含文件。
 
 ```
-php /home/mydisk/index.php
+cd /home/mydisk && php index.php
 ```
 
 ```
-sudo chown caddy:caddy -R /home/mydisk && sudo chmod 777 -R /home/mydisk
+sudo chown caddy:caddy -R /home/mydisk && sudo chmod 755 -R /home/mydisk
 ```
 
 step4:caddy2发布index.php
