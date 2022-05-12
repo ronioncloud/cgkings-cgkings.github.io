@@ -75,9 +75,29 @@ sudo systemctl restart php7.4-fpm.service && sudo systemctl restart caddy
 
 ![](<../.gitbook/assets/image (75).png>)
 
+最后
 
+修改PHP上传限制，upload 128M,post 1024M,max time 600,memory\_limit 256M
 
+```
+max_execution_time
+```
 
+```
+max_input_time
+```
+
+```
+memory_limit
+```
+
+```
+post_max_size
+```
+
+```
+upload_max_filesize
+```
 
 
 
